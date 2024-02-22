@@ -1,0 +1,14 @@
+greeting:
+  message: "hello"
+
+quarkus:
+  http:
+    port: 8088
+  flyway:
+    enabled: true
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: admin
+    jdbc:
+      url: jdbc:postgresql://localhost:5432/compro
