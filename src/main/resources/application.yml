@@ -12,3 +12,13 @@ quarkus:
     password: admin
     jdbc:
       url: jdbc:postgresql://localhost:5432/compro
+      min-size: 5
+      max-size: 20
+  smallrye-openapi:
+    enable: true
+  hibernate-orm:
+    log:
+      sql: true
+      format-sql: true
+      bind-parameters: true
+      jdbc-warnings: true
