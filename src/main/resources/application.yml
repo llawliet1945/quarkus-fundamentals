@@ -6,9 +6,27 @@ quarkus:
     port: 8088
   flyway:
     enabled: true
+    migrate-at-start: false
+    schemas: fundamentals
   datasource:
     db-kind: postgresql
     username: postgres
     password: admin
     jdbc:
-      url: jdbc:postgresql://localhost:5432/compro
+      url: jdbc:postgresql://localhost:5432/quarkus-dev
+      min-size: 5
+      max-size: 20
+  smallrye-openapi:
+    enable: true
+  hibernate-orm:
+    validation:
+      enabled: false
+    log:
+      sql: true
+      format-sql: true
+      bind-parameters: true
+      jdbc-warnings: true
+    database:
+      generation: none
+  jackson:
+    fail-on-empty-beans: false
